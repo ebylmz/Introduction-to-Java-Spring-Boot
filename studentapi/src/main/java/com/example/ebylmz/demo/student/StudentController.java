@@ -16,24 +16,24 @@ public class StudentController {
         this.studentService = studentService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public List<Student> getStudents() {
         return studentService.getStudents();
     }
 
-    @PutMapping
+    @PostMapping("/register")
     public void registerNewStudent(@RequestBody Student student) {
         studentService.addNewStudent(student);
     }
 
-    @DeleteMapping(path = "{studentID}")
+    @DeleteMapping(path = "/delete/{studentID}")
     public void deleteStudent(@PathVariable("studentID") Long studentID) {
         studentService.deleteStudent(studentID);
     }
 
     // PUT http://localhost:8080/student/1?name=Maria
     // PUT http://localhost:8080/student/1?name=Maria&email=maria@gmail.com
-    @PutMapping(path = "{studentID}")
+    @PutMapping(path = "update/{studentID}")
     public void updateStudent(
             @PathVariable("studentID") Long studentID,
             @RequestParam(required = false) String name,

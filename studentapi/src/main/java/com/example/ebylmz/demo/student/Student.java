@@ -24,7 +24,9 @@ public class Student {
 
     @Transient
     private Integer age;
-    private LocalDate dob; // date of birth
+
+    /* date of birth */
+    private LocalDate dob;
 
     public Student() {
     }
