@@ -6,8 +6,11 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.Arrays;
+
 @Configuration
 public class EmployeeConfig {
+    /*
     @Bean
     CommandLineRunner commandLineRunner(EmployeeRepo repo) {
         return args -> {
@@ -19,8 +22,8 @@ public class EmployeeConfig {
                     new Employee("Mary Jane", "mary@gmail.com", "Architect", "000 123-456", "https://bootdey.com/img/Content/avatar/avatar8.png", "3691c8df-f2aa-4cd3-9e1c-6d82f13ce445")
             };
 
-            for (var e : employees)
-                repo.save(e);
+            repo.saveAll(Arrays.asList(employees));
         };
     }
+    */
 }
