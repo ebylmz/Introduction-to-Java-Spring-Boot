@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "8fd7c937-62d9-4588-86b6-7934d3f2adda",
+		"name": "Employee Manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21664911"
+	},
+	"item": [
+		{
+			"name": "Get all employees",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Employee_Man_URL}}/all",
+					"host": [
+						"{{Employee_Man_URL}}"
+					],
+					"path": [
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one employee",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Employee_Man_URL}}/find/1",
+					"host": [
+						"{{Employee_Man_URL}}"
+					],
+					"path": [
+						"find",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new employee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Emirkan Burak Yılmaz\",\r\n    \"email\": \"ebylmz17@gmail.com\",\r\n    \"jobTitle\": \"Software Engineer\",\r\n    \"phoneNumber\": \"0507 848 4803\",\r\n    \"imageUrl\": \"https://bootdey.com/img/Content/avatar/avatar7.png\",\r\n    \"employeeCode\": \"3691c8df-f2aa-4cd3-9e1c-6d82f13ce44e\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Employee_Man_URL}}/add",
+					"host": [
+						"{{Employee_Man_URL}}"
+					],
+					"path": [
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update employee",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"name\": \"Emirkan Burak Yılmaz\",\r\n    \"email\": \"ebylmz17@gmail.com\",\r\n    \"jobTitle\": \"Software Engineer\",\r\n    \"phoneNumber\": \"0507 848 4803\",\r\n    \"imageUrl\": \"https://bootdey.com/img/Content/avatar/avatar7.png\",\r\n    \"employeeCode\": \"3691c8df-f2aa-4cd3-9e1c-6d82f13ce44e\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{Employee_Man_URL}}/update",
+					"host": [
+						"{{Employee_Man_URL}}"
+					],
+					"path": [
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove employee",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{Employee_Man_URL}}/delete/1",
+					"host": [
+						"{{Employee_Man_URL}}"
+					],
+					"path": [
+						"delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
